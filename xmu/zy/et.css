@@ -1,0 +1,84 @@
+* {
+  list-style: none;
+}
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.active {
+  color: #fd4d90;
+}
+.site-navbar {
+  background-color: #b2b2b2;
+}
+.site-navbar .container {
+  background-image: url(imgs/kid_transparent.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+}
+.site-navbar .container .d-flex .site-logo {
+  font-size: 40px;
+  float: left;
+}
+.site-navbar .container .d-flex .site-logo .text-primary {
+  color: red;
+}
+.site-navbar .container .d-flex .site-quick-contact {
+  display: flex;
+  margin-left: 520px;
+}
+.site-navbar .container .d-flex .site-quick-contact .d-flex i {
+  float: left;
+  padding: 0 15px;
+  line-height: 45px;
+}
+.site-navbar .container .d-flex .site-quick-contact .d-flex .fa-map-marker {
+  color: #fdb62f;
+}
+.site-navbar .container .d-flex .site-quick-contact .d-flex .fa-clock-o {
+  color: #fd4d40;
+  margin-left: 50px;
+}
+.site-navbar .container .d-flex .site-quick-contact .d-flex span {
+  font-size: 14px;
+  color: white;
+}
+.site-navbar .container .menu-wrap {
+  background-color: white;
+  padding: 30px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.site-navbar .container .menu-wrap .site-navigation .site-menu li {
+  float: left;
+  margin-left: 30px;
+  font-size: 16px;
+}
+.site-navbar .container .menu-wrap .top-social i {
+  margin-right: 20px;
+  font-size: 16px;
+}
+.site-navbar .container .menu-wrap .top-social i:nth-child(1) {
+  color: #16c3b0;
+}
+.site-navbar .container .menu-wrap .top-social i:nth-child(2) {
+  color: #71bc42;
+}
+.site-navbar .container .menu-wrap .top-social i:nth-child(3) {
+  color: #fdb62f;
+}
+.site-navbar .ftco-blocks-cover-1 .site-section-cover .container .align-items-center span {
+  color: #fd4d40;
+}
+.site-navbar .ftco-blocks-cover-1 .site-section-cover .container .align-items-center h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+.site-navbar .ftco-blocks-cover-1 .site-section-cover .container .align-items-center p {
+  font-size: 18px;
+  color: #fff;
+}
+/*# sourceMappingURL=./et.css.map */

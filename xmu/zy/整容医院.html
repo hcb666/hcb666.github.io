@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 强制ie浏览器使用 最新edge渲染引擎-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- 响应式网页必须 -->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./my-minireset.css">
+    <link rel="stylesheet" href="./整容医院.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- @media screen and (max-width: 992px) -->
+        <div class="header-top">
+            <div class="container">
+                <div class="row clear">
+                    <div class="col-lg-8">
+                        <ul class="header__top__left">
+                            <li><i class="fa fa-phone"></i> 1-677-124-44227</li>
+                            <li><i class="fa fa-map-marker"></i> Los Angeles Gournadi, 1230 Bariasl</li>
+                            <li><i class="fa fa-clock-o"></i> Mon to Sat 9:00am to 18:00pm</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="header__top__right">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <img src="./imgs/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__menu__option">
+                        <nav class="header__menu">
+                            <ul>
+                                <li class="active">Home</li>
+                                <li>About</li>
+                                <li>Services</li>
+                                <li>Pages
+                                    <ul class="dropdown">
+                                        <li>Pricing</li>
+                                        <li>Doctor</li>
+                                        <li>Blog Details</li>
+                                    </ul>
+                                </li>
+                                <li>News</li>
+                                <li>Contact</li>
+                            </ul>
+                        </nav>
+                        <div class="header__btn">
+                            <a href="#" class="primary-btn">Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+
+    </header>
+    <div class="mask">
+        <div class="aside">
+            <div class="aside-logo">
+                <img src="./imgs/logo.png" alt="">
+            </div>
+            <nav class="aside-menu">
+                <ul class="aside-list">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Pages
+                        <ul class="dropdown">
+                            <li>Pricing</li>
+                            <li>Doctor</li>
+                            <li>Blog Details</li>
+                        </ul>
+                    </li>
+                    <li>News</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <div class="aside-button">
+                <a href="#" class="primary-btn">Appointment</a>
+            </div>
+            <ul class="aside-top">
+                <li><i class="fa fa-phone"></i> 1-677-124-44227</li>
+                <li><i class="fa fa-map-marker"></i> Los Angeles Gournadi, 1230 Bariasl</li>
+                <li><i class="fa fa-clock-o"></i> Mon to Sat 9:00am to 18:00pm</li>
+            </ul>
+            <div class="aside-top-right">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="hero spad set-bg" data-setbg="img/hero-bg.jpg"
+        style="background-image: url(&quot;./imgs/hero-bg.jpg&quot;);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero__text">
+                        <span>Eiusmod tempor incididunt </span>
+                        <h2>Take the world's best quality Treadment</h2>
+                        <a href="#" class="primary-btn normal-btn">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="consultation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="consultation__form">
+                        <div class="section-title">
+                            <span>REQUEST FOR YOUR</span>
+                            <h2>Consultation</h2>
+                        </div>
+                        <form action="#">
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Email">
+                            <div class="datepicker__item">
+                                <input type="text" placeholder="Date" class="datepicker hasDatepicker"
+                                    id="dp1662028216443">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <select style="display: none;">
+                                <option value="">Type of service</option>
+                                <option value="">Advanced equipment</option>
+                                <option value="">Qualified doctors</option>
+                                <option value="">Certified services</option>
+                                <option value="">Emergency care</option>
+                            </select>
+                            <div class="nice-select" tabindex="0"><span class="current">Advanced equipment</span>
+
+                            </div>
+                            <button type="submit" class="site-btn">Book appoitment</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="consultation__text">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="consultation__text__item">
+                                    <div class="section-title">
+                                        <span>Welcon to Aesthetic</span>
+                                        <h2>Find Best Doctors With <b>AESTHETIC</b></h2>
+                                    </div>
+                                    <p>30 Years of experience in Cosmetic Surgery.Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="consultation__video set-bg" data-setbg="./imgs/consultation-video.jpg"
+                                    style="background-image: url(&quot;./imgs/consultation-video.jpg&quot;);">
+                                    <a href="https://www.youtube.com/watch?v=PXsuI67s2AA"
+                                        class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="offer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>
+                        <small>Secondary text</small>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </h2>
+                </div>
+            </div>
+            <div class="bottom-row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="./imgs/ci-1.png" alt="">
+                    <h5>offer</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aperiam qui, nam amet molestiae,
+                        eaque reiciendis, corporis minus possimus saepe voluptatem alias deleniti eius. Illo corporis
+                        recusandae totam at incidunt!</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="./imgs/ci-1.png" alt="">
+                    <h5>offer</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aperiam qui, nam amet molestiae,
+                        eaque reiciendis, corporis minus possimus saepe voluptatem alias deleniti eius. Illo corporis
+                        recusandae totam at incidunt!</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="./imgs/ci-1.png" alt="">
+                    <h5>offer</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aperiam qui, nam amet molestiae,
+                        eaque reiciendis, corporis minus possimus saepe voluptatem alias deleniti eius. Illo corporis
+                        recusandae totam at incidunt!</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="./imgs/ci-1.png" alt="">
+                    <h5>offer</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aperiam qui, nam amet molestiae,
+                        eaque reiciendis, corporis minus possimus saepe voluptatem alias deleniti eius. Illo corporis
+                        recusandae totam at incidunt!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services spad set-bg" data-setbg="./imgs/services-bg.jpg"
+        style="background-image: url(&quot;./imgs/services-bg.jpg&quot;);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-6">
+                    <div class="section-title">
+                        <span>Our services</span>
+                        <h2>Offer for you</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="services__btn">
+                        <a href="#" class="primary-btn">Contact us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row-four">
+                <div class="col-lg-6 col-md-6">
+                    <div class="services__item clear">
+                        <div class="services__item__icon">
+                            <img src="./imgs/ci-1.png" alt="">
+                        </div>
+                        <div class="services__item__text ">
+                            <h5>Body procedures</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="services__item clear">
+                        <div class="services__item__icon">
+                            <img src="./imgs/ci-1.png" alt="">
+                        </div>
+                        <div class="services__item__text">
+                            <h5>Facial Procedures</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="services__item clear">
+                        <div class="services__item__icon">
+                            <img src="./imgs/ci-1.png" alt="">
+                        </div>
+                        <div class="services__item__text">
+                            <h5>Breast procedures</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="services__item clear">
+                        <div class="services__item__icon">
+                            <img src="./imgs/ci-1.png" alt="">
+                        </div>
+                        <div class="services__item__text">
+                            <h5>Skin care &amp; Beauty</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <div class="team-title">
+                <p>OUR TEAM</p>
+                <h2>Our Expert Doctors</h2>
+            </div>
+            <div class="team-doctors">
+                <div class="doctor-one col-xs-12 col-sm-6 col-md-4">
+                    <img src="./imgs/team-1.jpg" alt="">
+                    <h5>Caroline Grant</h5>
+                    <p>Plastic surgeon</p>
+                    <div class="icons">
+                        <i class="fa fa-apple"></i>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-steam-square"></i>
+                        <i class="fa fa-qq"></i>
+                    </div>
+                </div>
+                <div class="doctor-one col-xs-12 col-sm-6 col-md-4">
+                    <img src="./imgs/team-2.jpg" alt="">
+                    <h5>Caroline Grant</h5>
+                    <p>Plastic surgeon</p>
+                    <div class="icons">
+                        <i class="fa fa-apple"></i>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-steam-square"></i>
+                        <i class="fa fa-qq"></i>
+                    </div>
+                </div>
+                <div class="doctor-one col-xs-12 col-sm-6 col-md-4">
+                    <img src="./imgs/team-3.jpg" alt="">
+                    <h5>Caroline Grant</h5>
+                    <p>Plastic surgeon</p>
+                    <div class="icons">
+                        <i class="fa fa-apple"></i>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-steam-square"></i>
+                        <i class="fa fa-qq"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <ul class="gallery-left col-xs-12 col-md-9">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="gallery-right col-md-3 col-xs-12"></div>
+    </section>
+
+    <section class="new">
+        <div class="container">
+            <div class="news">
+                <div class="wrapper clear  col-xs-12 ">
+                    <div class="news-title col-sm-6">
+                        <p class="">OUR NEWS</p>
+                        <h3 class="col-sm-6">Skin care tips</h3>
+                    </div>
+                    <div class="news-btn">
+                        <button style="width: 180px; height: 50px;">VIEW ALL NEWS</button>
+                    </div>
+                </div>
+                <ul class="list">
+                    <li class="">
+                        <div class="card col-sm-4 col-xs-12">
+                            <a href="">Here’s how you can get a natural glow this party season</a>
+                            <p class="small-title">Lorem ipsum, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <div class="author">
+                                <img src="./imgs/blog-author.jpg" alt="">
+                                <span class="name">John Doe</span>
+                                <span class="time">Dec 06, 2019</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card col-sm-4 col-xs-12">
+                            <a href="">Here’s how you can get a natural glow this party season</a>
+                            <p class="small-title">Lorem ipsum, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <div class="author">
+                                <img src="./imgs/blog-author.jpg" alt="">
+                                <span class="name">John Doe</span>
+                                <span class="time">Dec 06, 2019</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card col-sm-4 col-xs-12">
+                            <a href="">Here’s how you can get a natural glow this party season</a>
+                            <p class="small-title">Lorem ipsum, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <div class="author">
+                                <img src="./imgs/blog-author.jpg" alt="">
+                                <span class="name">John Doe</span>
+                                <span class="time">Dec 06, 2019</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="footer__logo">
+                            <p>AESTHETIC</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8">
+                        <div class="footer__newslatter">
+                            <form action="#">
+                                <input type="text" placeholder="Email">
+                                <button type="submit" class="site-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Company</h5>
+                        <ul>
+                            <li>About Us</a></li>
+                            <li>Departments</a></li>
+                            <li>Find a Doctor</a></li>
+                            <li>FAQ</a></li>
+                            <li>News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Quick links</h5>
+                        <ul>
+                            <li>Facial Fillers</li>
+                            <li>Breast Surgery</li>
+                            <li>Body Lifts</li>
+                            <li>Face &amp; Neck</li>
+                            <li>Fat Reduction</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__address">
+                        <h5>Contact Us</h5>
+                        <ul>
+                            <li><i class="fa fa-map-marker"></i> Los Angeles Gournadi, 1230 Bariasl</li>
+                            <li><i class="fa fa-phone"></i> 1-677-124-44227</li>
+                            <li><i class="fa fa-envelope"></i> Support@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-6">
+                    <div class="footer__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48158.305462977965!2d-74.13283844036356!3d41.02757295168286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2e440473470d7%3A0xcaf503ca2ee57958!2sSaddle%20River%2C%20NJ%2007458%2C%20USA!5e0!3m2!1sen!2sbd!4v1575917275626!5m2!1sen!2sbd"
+                            height="190" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+
+                        <div class="footer__copyright__text">
+                            <p>Copyright © 2022 All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://www.17sucai.com" target="_blank">17sucai</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <ul>
+                            <li>All Rights Reserved</li>
+                            <li>Terms &amp; Use</li>
+                            <li>Privacy Policy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $("header .container .canvas__open").click(function () {
+            $(".mask").toggleClass("open")
+        })
+    </script>
+</body>
+
+</html>

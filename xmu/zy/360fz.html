@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <title>欢迎使用360极速浏览器</title>
+    <meta name="description"
+        content="360极速浏览器是国内高端用户首选的浏览器。360极速浏览器在保证安全和稳定的基础上把“极速”做到极致，启动快，打开网页快。同时它界面简洁精致，还支持通过壁纸实现整体换肤，换肤效果令人印象深刻。">
+    <script src="https://bs1.360sres.com/!a7b00204/sendGifs.js"></script>
+    <script type="text/javascript">
+        function getQueryString(e) {
+            var t = new RegExp("(^|&)" + e + "=([^&]*)(&|$)", "i"),
+                n = window.location.search.substr(1).match(t);
+            return n != null ? unescape(n[2]) : null
+        }
+        var _ref = document.referrer,
+            isMac = /Macintosh.* Mac OS X.*/i.test(navigator.userAgent);
+        isMac ? location.protocol == "http:" ? (localStorage.setItem("_ref", _ref), location.href = location.href
+            .replace(/^http:/, "https:")) : (getQueryString("from") !== "mac" && (location.href =
+            "https://browser.360.cn/ee/mac/index.html"), localStorage.getItem("_ref") ? (Frame.sendGif(
+            "1053.6868.gif", {
+                _referer: encodeURIComponent(localStorage.getItem("_ref"))
+            }), localStorage.removeItem("_ref")) : Frame.sendGif("1053.6868.gif", {
+            _referer: encodeURIComponent(_ref)
+        })) : Frame.sendGif("1053.6868.gif", {
+            _referer: encodeURIComponent(_ref)
+        })
+    </script>
+    <style type="text/css">
+        * {
+            user-select: none
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: fzlt, "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1", Helvetica, Arial, sans-serif;
+            background-color: #010001;
+            min-width: 1200px
+        }
+
+        a,
+        p,
+        div,
+        ul,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        .fl {
+            float: left
+        }
+
+        .fr {
+            float: right
+        }
+
+        .clearfix {
+            clear: both
+        }
+
+        .mt-20 {
+            margin-top: 20px
+        }
+
+        .inlineBlock {
+            display: inline-block
+        }
+
+        .alineCenter {
+            text-align: center
+        }
+
+        .bigTitleWord {
+            font-size: 60px;
+            line-height: 70px;
+            color: #fff;
+            font-family: fzltBold
+        }
+
+        .midTitleWord {
+            font-size: 36px;
+            line-height: 40px;
+            color: #fff
+        }
+
+        .smaTitleWord {
+            font-size: 16px;
+            line-height: 22px;
+            color: #fff
+        }
+
+        .bigTitleTip {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            margin: 8px auto 36px;
+            letter-spacing: 0 !important
+        }
+
+        .bigTitleTip.fluent-title-show {
+            opacity: .8 !important
+        }
+
+        .titlesTransformDefault {
+            opacity: 0;
+            position: relative;
+            top: 40px
+        }
+
+        .titlesTransformActive {
+            opacity: 1;
+            top: 0;
+            transition: opacity .8s, top .8s
+        }
+
+        .header {
+            position: fixed;
+            z-index: 9;
+            top: 0;
+            left: 0;
+            height: 48px;
+            width: 100%;
+            background-color: #000
+        }
+
+        .headerContent {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto
+        }
+
+        .headerContent .logoImg {
+            margin-top: 10px
+        }
+
+        .headerContent .links {
+            color: #A4A4A4;
+            margin-left: 40px;
+            line-height: 48px
+        }
+
+        .swiper-container {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            left: 0
+        }
+
+        .taste-hover-tips {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99;
+            width: 720px;
+            padding: 5px 0;
+            background: rgba(34, 34, 34, 1);
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-family: "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1", Helvetica, Arial, sans-serif
+        }
+
+        .taste-hover-tips .left img {
+            width: 66px;
+            height: auto;
+            display: block;
+            margin: 0 7px 0 15px;
+            -webkit-user-drag: none
+        }
+
+        .taste-hover-tips .middle {
+            position: absolute;
+            top: 13px;
+            left: 88px
+        }
+
+        .taste-hover-tips .right {
+            position: absolute;
+            top: 16px;
+            right: 24px
+        }
+
+        .taste-hover-tips .sec-first {
+            font-size: 19px;
+            font-weight: 700
+        }
+
+        .taste-hover-tips .sec-second {
+            font-size: 14px;
+            margin-top: 5px
+        }
+
+        .taste-hover-tips .sec-second a {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #3BA0FF;
+            line-height: 19px;
+            margin-left: 10px
+        }
+
+        .taste-hover-tips .sec-second a:hover {
+            text-decoration: underline
+        }
+
+        .taste-hover-tips .btn-right {
+            width: 144px;
+            height: 46px;
+            background: #017AFF;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.7);
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 1);
+            line-height: 48px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            text-decoration-line: none
+        }
+
+        .taste-hover-tips .btn-right:hover {
+            background: #08F
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #010001;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent {
+            background-image: url('https://se3.360simg.com/t01a11874d1bb2ca506.jpg')
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .swiper-slide-fluent-meng {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            position: absolute;
+            z-index: 5;
+            left: 0;
+            top: 0;
+            opacity: .8
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .swiper-slide-fluent-meng-active {
+            opacity: 0;
+            transition: opacity 2s;
+            -moz-transition: opacity 2s;
+            -webkit-transition: opacity 2s;
+            -o-transition: opacity 2s;
+            -ms-transition: opacity 2s
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .swiper-slide-fluent-title-box {
+            position: relative;
+            z-index: 6;
+            top: 160px
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .fluentTitle {
+            padding: 0 50px;
+            font-family: fzlt;
+            opacity: .2;
+            letter-spacing: 2px
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .downloadBtn {
+            display: table;
+            margin: 0 auto
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .downloadBtn a {
+            float: left;
+            width: 180px;
+            height: 60px;
+            border-radius: 30px;
+            border: 1px solid #FFF;
+            margin: 0 16px;
+            font-size: 20px;
+            line-height: 60px;
+            text-align: center
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .downloadBtn a#loadnew {
+            background: rgba(0, 0, 0, 0.5);
+            color: #FFF
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .downloadBtn a#loadnew64 {
+            background: #FFF;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+            color: #000;
+            position: relative
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .downloadBtn a#loadnew64 img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            display: inline-block;
+            vertical-align: text-top;
+            vertical-align: middle\9;
+            border: 0
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .downloadBtn a#loadnew64 p {
+            width: 40px;
+            font-size: 12px;
+            color: #FFF;
+            line-height: 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #FF6363 0, #FF3434 100%);
+            background-color: #FF6363;
+            border-radius: 8px 2px 8px 2px;
+            position: absolute;
+            top: -9px;
+            right: -8px
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .download-desc {
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 6px;
+            letter-spacing: normal
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .download-desc span {
+            margin: 0 14px;
+            color: #fff
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .fluent-title-show {
+            opacity: 1;
+            transition: opacity 2s;
+            -moz-transition: opacity 2s;
+            -webkit-transition: opacity 2s;
+            -o-transition: opacity 2s;
+            -ms-transition: opacity 2s
+        }
+
+        .swiper-container .download-desc.fluent-title-show {
+            opacity: .6 !important
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .fluent-img {
+            display: block;
+            height: auto;
+            position: absolute
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .fluent-img-ball1 {
+            width: 13.2%;
+            left: 20%;
+            top: 22.7%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .fluent-img-ball2 {
+            width: 22.3%;
+            left: 65.16%;
+            top: 49.8%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .fluent-img-ball-animate {
+            animation: ballAnimation 5s linear infinite alternate;
+            -moz-animation: ballAnimation 5s linear infinite alternate;
+            -webkit-animation: ballAnimation 5s linear infinite alternate;
+            -o-animation: ballAnimation 5s linear infinite alternate;
+            -ms-animation: ballAnimation 5s linear infinite alternate
+        }
+
+        @keyframes ballAnimation {
+            from {
+                margin-top: 0
+            }
+
+            to {
+                margin-top: -25px
+            }
+        }
+
+        @-moz-keyframes ballAnimation {
+            from {
+                margin-top: 0
+            }
+
+            to {
+                margin-top: -25px
+            }
+        }
+
+        @-webkit-keyframes ballAnimation {
+            from {
+                margin-top: 0
+            }
+
+            to {
+                margin-top: -25px
+            }
+        }
+
+        @-o-keyframes ballAnimation {
+            from {
+                margin-top: 0
+            }
+
+            to {
+                margin-top: -25px
+            }
+        }
+
+        @-ms-keyframes ballAnimation {
+            from {
+                margin-top: 0
+            }
+
+            to {
+                margin-top: -25px
+            }
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .fluent-img-airship {
+            width: 7.2%;
+            left: 63.96%;
+            top: 40.18%;
+            animation: airshipAnimation 30s linear infinite alternate
+        }
+
+        @keyframes airshipAnimation {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(-45deg)
+            }
+        }
+
+        @-moz-keyframes airshipAnimation {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(-45deg)
+            }
+        }
+
+        @-webkit-keyframes airshipAnimation {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(-45deg)
+            }
+        }
+
+        @-o-keyframes airshipAnimation {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(-45deg)
+            }
+        }
+
+        @-ms-keyframes airshipAnimation {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(-45deg)
+            }
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star {
+            position: absolute;
+            z-index: 2;
+            opacity: .1;
+            background-color: #fff;
+            border-radius: 100%;
+            box-shadow: 2px 2px 4px #F0F2F5, -2px -2px 4px #F0F2F5, -2px 2px 4px #F0F2F5, 2px -2px 4px #F0F2F5;
+            -moz-box-shadow: 2px 2px 4px #F0F2F5, -2px -2px 4px #F0F2F5, -2px 2px 4px #F0F2F5, 2px -2px 4px #F0F2F5;
+            -webkit-box-shadow: 2px 2px 4px #F0F2F5, -2px -2px 4px #F0F2F5, -2px 2px 4px #F0F2F5, 2px -2px 4px #F0F2F5;
+            -o-box-shadow: 2px 2px 4px #F0F2F5, -2px -2px 4px #F0F2F5, -2px 2px 4px #F0F2F5, 2px -2px 4px #F0F2F5;
+            -ms-box-shadow: 2px 2px 4px #F0F2F5, -2px -2px 4px #F0F2F5, -2px 2px 4px #F0F2F5, 2px -2px 4px #F0F2F5;
+            width: 2px;
+            height: 2px
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star1 {
+            left: 28%;
+            top: 52%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star2 {
+            left: 80%;
+            top: 33%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star3 {
+            left: 32%;
+            bottom: 10%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star4 {
+            left: 68%;
+            top: 55%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star5 {
+            left: 51%;
+            bottom: 17%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star6 {
+            left: 25%;
+            top: 57%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star7 {
+            left: 46%;
+            bottom: 20%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star8 {
+            left: 67%;
+            top: 39%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .star9 {
+            left: 30%;
+            bottom: 26%
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide-fluent .starAnimation {
+            animation: starAnimation 4s linear infinite;
+            -moz-animation: starAnimation 4s linear infinite;
+            -webkit-animation: starAnimation 4s linear infinite;
+            -o-animation: starAnimation 4s linear infinite;
+            -ms-animation: starAnimation 4s linear infinite
+        }
+
+        @keyframes starAnimation {
+            0% {
+                opacity: .1
+            }
+
+            10% {
+                opacity: .2
+            }
+
+            20% {
+                opacity: .4
+            }
+
+            30% {
+                opacity: .6
+            }
+
+            40% {
+                opacity: .8
+            }
+
+            50% {
+                opacity: 1
+            }
+
+            60% {
+                opacity: .8
+            }
+
+            70% {
+                opacity: .6
+            }
+
+            80% {
+                opacity: .4
+            }
+
+            90% {
+                opacity: .2
+            }
+
+            100% {
+                opacity: .1
+            }
+        }
+
+        @-moz-keyframes starAnimation {
+            0% {
+                opacity: .1
+            }
+
+            10% {
+                opacity: .2
+            }
+
+            20% {
+                opacity: .4
+            }
+
+            30% {
+                opacity: .6
+            }
+
+            40% {
+                opacity: .8
+            }
+
+            50% {
+                opacity: 1
+            }
+
+            60% {
+                opacity: .8
+            }
+
+            70% {
+                opacity: .6
+            }
+
+            80% {
+                opacity: .4
+            }
+
+            90% {
+                opacity: .2
+            }
+
+            100% {
+                opacity: .1
+            }
+        }
+
+        @-webkit-keyframes starAnimation {
+            0% {
+                opacity: .1
+            }
+
+            10% {
+                opacity: .2
+            }
+
+            20% {
+                opacity: .4
+            }
+
+            30% {
+                opacity: .6
+            }
+
+            40% {
+                opacity: .8
+            }
+
+            50% {
+                opacity: 1
+            }
+
+            60% {
+                opacity: .8
+            }
+
+            70% {
+                opacity: .6
+            }
+
+            80% {
+                opacity: .4
+            }
+
+            90% {
+                opacity: .2
+            }
+
+            100% {
+                opacity: .1
+            }
+        }
+
+        @-o-keyframes starAnimation {
+            0% {
+                opacity: .1
+            }
+
+            10% {
+                opacity: .2
+            }
+
+            20% {
+                opacity: .4
+            }
+
+            30% {
+                opacity: .6
+            }
+
+            40% {
+                opacity: .8
+            }
+
+            50% {
+                opacity: 1
+            }
+
+            60% {
+                opacity: .8
+            }
+
+            70% {
+                opacity: .6
+            }
+
+            80% {
+                opacity: .4
+            }
+
+            90% {
+                opacity: .2
+            }
+
+            100% {
+                opacity: .1
+            }
+        }
+
+        @-ms-keyframes starAnimation {
+            0% {
+                opacity: .1
+            }
+
+            10% {
+                opacity: .2
+            }
+
+            20% {
+                opacity: .4
+            }
+
+            30% {
+                opacity: .6
+            }
+
+            40% {
+                opacity: .8
+            }
+
+            50% {
+                opacity: 1
+            }
+
+            60% {
+                opacity: .8
+            }
+
+            70% {
+                opacity: .6
+            }
+
+            80% {
+                opacity: .4
+            }
+
+            90% {
+                opacity: .2
+            }
+
+            100% {
+                opacity: .1
+            }
+        }
+
+        .word-86-content-show-hide {
+            opacity: .2
+        }
+
+        .word-86-content-show {
+            opacity: 1;
+            transition: opacity 3s;
+            -moz-transition: opacity 3s;
+            -webkit-transition: opacity 3s;
+            -o-transition: opacity 3s;
+            -ms-transition: opacity 3s
+        }
+
+        .swiper-pagination {
+            width: 8px;
+            height: 72px;
+            right: 30px;
+            top: 50%;
+            margin-top: -36px
+        }
+
+        .footer,
+        .footer a {
+            color: #4A4A4A
+        }
+
+        .footer {
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            bottom: 0;
+            height: 120px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 22px;
+            padding-top: 38px;
+            overflow: hidden;
+            background-color: #131416
+        }
+
+        html.isIe,
+        .isIe body {
+            height: auto;
+            overflow: auto
+        }
+
+        .swiper-pagination .swiper-pagination-bullet {
+            width: 6px;
+            height: 6px;
+            float: left;
+            margin-bottom: 8px;
+            background: #c3c3c3
+        }
+
+        .swiper-pagination .swiper-pagination-bullet-active {
+            background: rgba(255, 255, 255, 0.8)
+        }
+
+        .isIe .swiper-container {
+            display: block;
+            height: auto
+        }
+
+        .isIe .word-86-content-show-hide {
+            opacity: 1
+        }
+
+        .isIe .swiper-container .swiper-wrapper {
+            display: block;
+            height: auto
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .word-content {
+            width: 50%;
+            min-width: 400px;
+            position: absolute;
+            z-index: 5;
+            left: 18%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 1.5s;
+            -moz-transition: opacity 1.5s;
+            -webkit-transition: opacity 1.5s;
+            -o-transition: opacity 1.5s;
+            -ms-transition: opacity 1.5s
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .word-content-show {
+            opacity: 1;
+            transition: opacity 1.5s;
+            -moz-transition: opacity 1.5s;
+            -webkit-transition: opacity 1.5s;
+            -o-transition: opacity 1.5s;
+            -ms-transition: opacity 1.5s
+        }
+
+        .isIe .swiper-container .swiper-wrapper .swiper-slide {
+            position: relative
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .word-content .line {
+            width: 28px;
+            height: 3px;
+            background-color: #5E5E5E;
+            margin: 20px 0
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .word-content .smaTitle {
+            margin: 12px 0 50px
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .word-content .smallDownloadBtn {
+            display: block;
+            width: 200px;
+            height: 48px;
+            background-image: url('https://se3.360simg.com/t011052084f40af7726.png');
+            background-repeat: no-repeat;
+            background-position: 0 0
+        }
+
+        .isIe .swiper-container .swiper-wrapper .swiper-slide .fluentTitle,
+        .isIe .swiper-container .swiper-wrapper .swiper-slide .downloadBtn {
+            opacity: 1
+        }
+
+        .isIe .swiper-container .swiper-wrapper .swiper-slide-fluent .fluent-img-airship {
+            animation: none
+        }
+
+        .isIe .swiper-container .swiper-wrapper .swiper-slide .word-content {
+            opacity: 1;
+            transform: none;
+            margin-top: -144px
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide .word-content .smallDownloadBtn:hover {
+            background-position: -200px 0
+        }
+    </style>
+    <!-- 已下style强制黑白展示 -->
+    <!-- <style>html,*{filter:gray!important;-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);-webkit-filter:grayscale(1)}body{filter:gray}</style> -->
+    <script src="https://bs2.360sres.com/!d72afc4d/jquery-1.8.0.min.js"></script>
+    <script src="https://bs1.360sres.com/!627d7516/grayscale.js"></script>
+
+    <!--[if (!IE)]> -->
+    <link rel="stylesheet" href="https://bs2.360sres.com/static/8d3f6b1d532060b6.css">
+    <script src="https://bs2.360sres.com/static/0bdc2cc3a622dc5c.js"></script>
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'fzlt';
+            src: url('https://bs2.360sres.com/static/3fe4e65cb36cfc00.ttf');
+            src: url('https://bs1.360sres.com/static/3fe4e65cb36cfc00.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'fzltBold';
+            src: url('https://bs2.360sres.com/static/7ae611821431b418.ttf');
+            src: url('https://bs2.360sres.com/static/7ae611821431b418.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .logo-15 {
+            display: inline-block;
+            width: 76px;
+            height: auto;
+            margin: 10px 0 0 12px
+        }
+    </style>
+    <!-- <![endif]-->
+
+    <!--[if (IE)]> -->
+    <style type="text/css">
+        .swiper-container .swiper-wrapper .swiper-slide .downloadBtn a#loadnew64 img {
+            vertical-align: middle;
+            margin-top: -4px
+        }
+    </style>
+    <!-- <[endif]-->
+</head>
+
+<body>
+    <img src="https://se2.360simg.com/t0150301cc5cf15e872.png" alt="360极速浏览器" style="display:none">
+    <div id="header" class="header">
+        <div class="headerContent">
+            <img class="logoImg fl" src="https://se3.360simg.com/t01e2879d675f7f8e98.png" alt="">
+            <!-- <img class="logo-15 fl" src="https://s2.ssl.qhres2.com/static/3494df882588c728.svg" alt="15周年庆"> -->
+            <span class="linkBox fr">
+                <a class="links fl" href="https://bbs.360.cn/forum-142-1.html" target="_blank">论坛</a>
+                <a class="links fl" href="https://ext.chrome.360.cn/webstore" target="_blank">扩展</a>
+                <!-- <a class="links fl" href="http://down.360safe.com/cse/360Browser_for_mac_qiangpiao.dmg" target="_blank">抢票专版</a> -->
+                <a class="links fl" href="https://browser.360.cn/ee/mac/index.html" target="_blank">Mac版</a>
+
+                <!-- <a  class="links fl" href="https://down.360safe.com/cse/360cse_13.5.1060.0.exe">极简版</a> -->
+                <!-- <a class="links fl cesx" href="https://browser.360.cn/eex/index.html?channel=0" target="_blank">极速64位版本</a> -->
+
+                <!-- <a class="links fr" href="" target="_blank">English</a> -->
+                <span class="clearfix"></span>
+            </span>
+            <span class="clearfix"></span>
+        </div>
+    </div>
+    <div class="swiper-container" id="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-fluent">
+                <div class="swiper-slide-fluent-title-box">
+                    <p class="bigTitleWord alineCenter fluentTitle">畅快浏览 极致体验</p>
+                    <p class="bigTitleTip alineCenter fluentTitle">全新Chrome内核浏览器，性能更强，速度更快</p>
+                    <!-- <a href="https://down.360safe.com/cse/360cse_13.0.2256.0.exe" target="_blank" class="alineCenter downloadBtn word-86-content-show-hide" id="loadnew"></a> -->
+                    <!-- <p class="download-desc fluentTitle">360极速浏览器<span>|</span>版本：13.0.2256.0</p> -->
+                    <span class="alineCenter downloadBtn word-86-content-show-hide">
+                        <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe" id="loadnew">32位版本</a>
+                        <a href="https://down.360safe.com/cse/360csex_setup.exe" id="loadnew64"><img
+                                src="https://se3.360simg.com/t0102fdf3201e9fcf21.png">64位版本<p>NEW</p></a>
+                    </span>
+                </div>
+                <!-- <video autoplay loop muted>
+                    <source src="https://s1.ssl.qhres2.com/static/1d8f999ef937e631.mp4" type="video/mp4"></source>
+                    当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+                </video> -->
+                <img class="fluent-img fluent-img-ball1" src="https://se1.360simg.com/t0141db0679fb1bf286.png"
+                    alt="左侧星球">
+                <img class="fluent-img fluent-img-ball2" src="https://se2.360simg.com/t01cbd552d7384e1cb3.png"
+                    alt="右侧星球">
+                <img class="fluent-img fluent-img-airship" src="https://se2.360simg.com/t01c656ec605cf238d0.png"
+                    alt="飞船">
+                <span class="star inlineBlock star1 ieHidden"></span>
+                <span class="star inlineBlock star2 ieHidden"></span>
+                <span class="star inlineBlock star3 ieHidden"></span>
+                <span class="star inlineBlock star4 ieHidden"></span>
+                <span class="star inlineBlock star5 ieHidden"></span>
+                <span class="star inlineBlock star6 ieHidden"></span>
+                <span class="star inlineBlock star7 ieHidden"></span>
+                <span class="star inlineBlock star8 ieHidden"></span>
+                <span class="star inlineBlock star9 ieHidden"></span>
+                <div class="swiper-slide-fluent-meng ieHidden"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-fast">
+                <div class="word-content word-content-1 fast-word-content">
+                    <p class="bigTitleWord">极速</p>
+                    <div class="line"></div>
+                    <p class="midTitleWord">全新Chromium内核</p>
+                    <p class="smaTitleWord smaTitle">性能强劲，快如闪电。</p>
+                    <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe"
+                        class="alineCenter smallDownloadBtn"></a>
+                </div>
+                <video autoplay="" loop="" muted="">
+                    <source src="https://s2.ssl.qhres2.com/static/dfeefadde568eab0.mp4" type="video/mp4">
+                    当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+                </video>
+            </div>
+            <div class="swiper-slide swiper-slide-cool">
+                <div class="word-content word-content-2 cool-word-content">
+                    <p class="bigTitleWord">极酷</p>
+                    <div class="line"></div>
+                    <p class="midTitleWord">暗夜炫黑模式</p>
+                    <p class="smaTitleWord smaTitle">定义酷，定义你。</p>
+                    <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe"
+                        class="alineCenter smallDownloadBtn"></a>
+                </div>
+                <video autoplay="" loop="" muted="">
+                    <source src="https://s3.ssl.qhres2.com/static/9bebcedf292f327e.mp4" type="video/mp4">
+                    当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+                </video>
+            </div>
+            <div class="swiper-slide swiper-slide-safe">
+                <div class="word-content word-content-3 safe-word-content">
+                    <p class="bigTitleWord">极安全</p>
+                    <div class="line"></div>
+                    <p class="midTitleWord">DNS加密防劫持</p>
+                    <p class="smaTitleWord smaTitle">安全升级，肆意无忌。</p>
+                    <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe"
+                        class="alineCenter smallDownloadBtn"></a>
+                </div>
+                <video autoplay="" loop="" muted="">
+                    <source src="https://s1.ssl.qhres2.com/static/fdf92889c539303c.mp4" type="video/mp4">
+                    当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+                </video>
+            </div>
+            <div class="swiper-slide swiper-slide-screen">
+                <div class="word-content word-content-4 screen-word-content">
+                    <p class="bigTitleWord">极视界</p>
+                    <div class="line"></div>
+                    <p class="midTitleWord">4K高清视频播放</p>
+                    <p class="smaTitleWord smaTitle">还原真实之美 ，尽显万物本色。</p>
+                    <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe"
+                        class="alineCenter smallDownloadBtn"></a>
+                </div>
+                <video autoplay="" loop="" muted="">
+                    <source src="https://s1.ssl.qhres2.com/static/7e7f0ec4a0cc7a66.mp4" type="video/mp4">
+                    当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+                </video>
+                <div id="footer" class="footer">Copyright © 2005-<script>
+                        var crdate = new Date;
+                        document.write(crdate.getFullYear())
+                    </script> 360.CN All Rights Reserved 360互联网安全中心
+                    <a target="_blank" href="http://www.360.cn/privacy/v3/bps360jsllqWindowsb.html">隐私政策</a>
+                    <a target="_blank" href="https://beian.miit.gov.cn">京ICP证080047号[京ICP备08010314号-6]</a>
+                    <br>
+                    <span>
+                        网站举报电话：4006693600 举报邮箱：<a href="mailto:kefu@360.cn">kefu@360.cn</a> 互联网违法和不良信息举报中心：<a
+                            target="_blank" href="https://www.12377.cn/">https://www.12377.cn</a>
+                    </span>
+                    <br>
+                    <a target="_blank"
+                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000006"> <img
+                            src="https://se1.360simg.com/t01d8eda6e551cf2615.png"
+                            style="vertical-align: middle; border:none;" alt=""> 京公网安备 11000002000006号</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="taste-hover-tips word-86-content-show-hide">
+  <section class="left">
+    <img src="https://se3.360simg.com/t0121eb611748e18cb3.png" alt="内核图标">
+  </section>
+  <section class="middle">
+    <p class="sec-first">Chromium 86 内核</p>
+    <p class="sec-second">极速浏览器率先升级，性能更强，更安全，极速体验<a href="https://bbs.360.cn/thread-15913525-1-1.html" target="_blank">更新日志>></a></p>
+  </section>
+  <section class="right">
+    <a target="_blank" href="https://down.360safe.com/cse/360cse_13.0.2196.0.exe" class="btn-right" id="loadbeta">Beta版下载</a>
+  </section>
+</div> -->
+    <div class="swiper-pagination ieHidden"></div>
+
+
+
+    <script type="text/javascript">
+        var browser = {
+            versions: function () {
+                var e = navigator.userAgent,
+                    t = navigator.appVersion;
+                return {
+                    trident: e.indexOf("Trident") > -1
+                }
+            }
+        };
+        if (browser.versions().trident) {
+            $("html").addClass("isIe"), $(".ieHidden").hide();
+            var winWidth = $(window).width(),
+                winHeight = $(window).height();
+            $(".isIe .swiper-container .swiper-wrapper .swiper-slide").css({
+                width: winWidth,
+                height: winHeight
+            }), $(document).scroll(function () {
+                var e = winHeight * 3 + winHeight * 2 / 3;
+                $(document).scrollTop() > e ? $(".taste-hover-tips").hide(400) : $(".taste-hover-tips").show(
+                    400)
+            })
+        }
+        if (!browser.versions().trident) {
+            clearTimeout(mengTimeout), clearTimeout(startTimeout1), clearTimeout(startTimeout2), clearTimeout(
+                startTimeout3), clearTimeout(startTimeout4), clearTimeout(ballTimeout);
+            var mengTimeout = null;
+            window.onload = function () {
+                $(".swiper-slide-fluent-meng").addClass("swiper-slide-fluent-meng-active"), mengTimeout =
+                    setTimeout(function () {
+                        $(".swiper-slide-fluent-meng").hide(), clearTimeout(mengTimeout)
+                    }, 2e3), $(".fluentTitle").addClass("fluent-title-show"), $(".downloadBtn").addClass(
+                        "fluent-title-show"), $(".taste-hover-tips").addClass("word-86-content-show")
+            }, $(".star1").addClass("starAnimation");
+            var startTimeout1 = setTimeout(function () {
+                    $(".star2").addClass("starAnimation"), $(".star3").addClass("starAnimation"), clearTimeout(
+                        startTimeout1)
+                }, 500),
+                startTimeout2 = setTimeout(function () {
+                    $(".star4").addClass("starAnimation"), $(".star5").addClass("starAnimation"), clearTimeout(
+                        startTimeout2)
+                }, 1e3),
+                startTimeout3 = setTimeout(function () {
+                    $(".star6").addClass("starAnimation"), $(".star7").addClass("starAnimation"), clearTimeout(
+                        startTimeout3)
+                }, 1500),
+                startTimeout4 = setTimeout(function () {
+                    $(".star8").addClass("starAnimation"), $(".star9").addClass("starAnimation"), clearTimeout(
+                        startTimeout4)
+                }, 2e3);
+            $(".fluent-img-ball1").addClass("fluent-img-ball-animate");
+            var ballTimeout = setTimeout(function () {
+                    $(".fluent-img-ball2").addClass("fluent-img-ball-animate"), clearTimeout(ballTimeout)
+                }, 2e3),
+                mySwiper = new Swiper(".swiper-container", {
+                    direction: "vertical",
+                    speed: 800,
+                    slideToClickedSlide: !0,
+                    mousewheel: !0,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: !0
+                    },
+                    on: {
+                        slideChange: function () {
+                            $(".word-content-show").removeClass("word-content-show");
+                            var e = this.activeIndex;
+                            e === 4 ? $(".taste-hover-tips").hide(400) : $(".taste-hover-tips").show(400),
+                                setTimeout(function () {
+                                    $(".word-content-" + e).addClass("word-content-show")
+                                }, 500)
+                        }
+                    }
+                });
+            $(".swiper-pagination-bullet").hover(function () {
+                $(this).click()
+            }, function () {})
+        }
+        $("#loadbeta").click(function () {
+            Frame.sendGif("1053.7911.gif", {
+                _referer: encodeURIComponent(_ref)
+            })
+        }), $("#loadnew").click(function () {
+            Frame.sendGif("1053.6735.gif", {
+                _referer: encodeURIComponent(_ref)
+            })
+        })
+    </script>
+</body>
+
+</html>

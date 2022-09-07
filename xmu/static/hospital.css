@@ -1,0 +1,626 @@
+nav .header-top {
+  background-color: #0c5d69;
+}
+nav .header-top .header-top-photo {
+  overflow: hidden;
+  line-height: 40px;
+  width: 1000px;
+  height: 40px;
+  margin: 0 auto;
+}
+nav .header-top .header-top-photo .header-icons {
+  float: right;
+}
+nav .header-top .header-top-photo .header-icons i {
+  margin-right: 10px;
+  color: white;
+}
+nav .header-top .header-top-photo .list-top {
+  overflow: hidden;
+  float: left;
+}
+nav .header-top .header-top-photo .list-top li {
+  float: left;
+  font-size: 12px;
+  margin-left: 30px;
+  color: white;
+  line-height: 3em;
+}
+nav .header-top .header-top-photo .list-top li i {
+  margin-right: 10px;
+}
+nav .header-row {
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 14px;
+  padding: 30px;
+  line-height: 50px;
+}
+nav .header-row::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+nav .header-row .header-logo {
+  float: left;
+  margin-top: 8px;
+}
+nav .header-row .header-list {
+  position: relative;
+  left: 100px;
+}
+nav .header-row .header-list > li {
+  float: left;
+  margin-right: 50px;
+  overflow: hidden;
+}
+nav .header-row .header-list > li:nth-child(1) {
+  border-bottom: 1px solid #0c5d69;
+}
+nav .header-row .header-list > li:hover {
+  border-bottom: 1px solid #0c5d69;
+}
+nav .header-row .header-list > li ul.pages {
+  clear: both;
+  position: absolute;
+  width: 90px;
+  height: 80px;
+  background-color: black;
+  display: none;
+}
+nav .header-row .header-list > li ul.pages li {
+  margin: 0 0;
+  float: left;
+  color: white;
+  line-height: 24px;
+}
+nav .header-row .header-list > li:hover .pages {
+  display: block;
+}
+nav .header-row button {
+  float: right;
+  width: 150px;
+  height: 40px;
+  border: 3px solid #13a2b7;
+  background: transparent;
+  border-radius: 5px;
+}
+.treadment {
+  background-image: url("imgs/hero-bg.jpg");
+}
+.treadment .left {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 150px;
+}
+.treadment .left p {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #2abed4;
+  font-weight: bold;
+}
+.treadment .left h3 {
+  margin: 20px 0;
+  font-size: 52px;
+  font-weight: bolder;
+}
+.treadment .left button {
+  width: 150px;
+  height: 50px;
+  background-color: #13a2b7;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0;
+  color: white;
+}
+.consultation {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.consultation .consultation-left {
+  width: 300px;
+  text-align: center;
+  padding: 20px 0;
+  border: 1px solid black;
+  margin-top: -50px;
+  background-color: white;
+  border-radius: 5px;
+  float: left;
+}
+.consultation .consultation-left p {
+  font-size: 14px;
+}
+.consultation .consultation-left h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.consultation .consultation-left .name {
+  width: 200px;
+  height: 35px;
+  margin: 20px 0;
+}
+.consultation .consultation-left .email {
+  width: 200px;
+  height: 35px;
+  margin: 20px 0;
+}
+.consultation .consultation-left .date {
+  width: 200px;
+  height: 35px;
+  margin: 20px 0;
+}
+.consultation .consultation-left .select {
+  width: 200px;
+  height: 35px;
+  margin: 20px 0;
+}
+.consultation .consultation-left button.book {
+  width: 200px;
+  height: 35px;
+  background-color: #13a2b7;
+  border: none;
+  font-weight: bold;
+}
+.consultation .assthetic {
+  overflow: hidden;
+  padding: 50px 0;
+  font-size: 24px;
+}
+.consultation .assthetic .assthetic-left {
+  width: 330px;
+  float: left;
+  margin-left: 30px;
+}
+.consultation .assthetic .assthetic-left .p1 {
+  font-size: 15px;
+  color: #888888;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.consultation .assthetic .assthetic-left h3 {
+  color: #111111;
+  font-weight: 700;
+  margin-top: 8px;
+}
+.consultation .assthetic .assthetic-left h3 span {
+  font-weight: 700;
+  color: #13a2b7;
+}
+.consultation .assthetic .assthetic-left .p2 {
+  color: #444444;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+.consultation .assthetic .assthetic-right {
+  width: 300px;
+  float: right;
+}
+.consultation .assthetic .assthetic-right .icon {
+  width: 100%;
+  height: 225px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.consultation .assthetic .assthetic-right .icon i {
+  color: #13a2b7;
+}
+.consultation .assthetic .assthetic-right .icon img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  display: block;
+}
+main {
+  padding: 50px;
+}
+main .offer {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+main .offer .offer-title {
+  padding: 10px 0;
+}
+main .offer .offer-title p {
+  font-size: 14px;
+}
+main .offer .offer-title h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+main .offer .offer-card {
+  padding: 20px 0;
+  overflow: hidden;
+}
+main .offer .offer-card .one-card {
+  width: 220px;
+  float: left;
+  margin: 0 15px;
+}
+main .offer .offer-card .one-card h5 {
+  font-weight: bold;
+}
+main .offer .offer-card .one-card p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.two {
+  background-image: url("imgs/services-bg.jpg");
+  padding: 50px;
+  background-size: cover;
+}
+.two .services {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.two .services .services-title {
+  overflow: hidden;
+}
+.two .services .services-title .small-title {
+  float: left;
+}
+.two .services .services-title .small-title p {
+  font-weight: bold;
+  color: #13a2b7;
+}
+.two .services .services-title .small-title h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+.two .services button.contact {
+  width: 130px;
+  height: 40px;
+  float: right;
+  background-color: transparent;
+  border: 1px solid #13a2b7;
+}
+.two .services .services-card {
+  overflow: hidden;
+  margin-top: 50px;
+}
+.two .services .services-card .two-card:hover {
+  background-color: #13a2b7;
+  transition: 0.5s;
+}
+.two .services .services-card .two-card:hover .card-right {
+  color: whitesmoke;
+}
+.two .services .services-card .two-card {
+  width: 410px;
+  float: left;
+  background-color: white;
+  margin: 15px;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.two .services .services-card .two-card img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding: 15px;
+}
+.two .services .services-card .two-card .card-right {
+  width: 300px;
+  float: right;
+}
+.two .services .services-card .two-card .card-right h5 {
+  font-weight: bold;
+}
+.two .services .services-card .two-card .card-right p {
+  margin-top: 10px;
+}
+.our {
+  padding: 50px;
+}
+.our .team {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.our .team .team-title p {
+  color: #a78888;
+  font-size: 12px;
+}
+.our .team .team-title h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.our .team .team-card {
+  overflow: hidden;
+}
+.our .team .team-card .there-card {
+  width: 270px;
+  float: left;
+  padding: 30px 0;
+  margin: 30px;
+}
+.our .team .team-card .there-card img {
+  border-radius: 50%;
+  border: 10px solid white;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.our .team .team-card .there-card img:hover {
+  border: 10px solid #13a2b7;
+  transition: 0.5s;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+.our .team .team-card .there-card h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.our .team .team-card .there-card p {
+  color: #13a2b7;
+}
+.our .team .team-card .there-card .team-icons i {
+  margin: 10px;
+}
+.gallery {
+  height: 620px;
+  overflow: hidden;
+}
+.gallery .gallery-left {
+  float: left;
+  width: 75%;
+  overflow: hidden;
+}
+.gallery .gallery-left li {
+  height: 300px;
+  width: calc(33.333% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+  box-sizing: border-box;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.gallery .gallery-left li:nth-child(1) {
+  background-image: url("imgs/gallery-1.jpg");
+}
+.gallery .gallery-left li:nth-child(2) {
+  background-image: url("imgs/gallery-2.jpg");
+}
+.gallery .gallery-left li:nth-child(3) {
+  background-image: url("imgs/gallery-3.jpg");
+}
+.gallery .gallery-left li:nth-child(4) {
+  background-image: url("imgs/gallery-5.jpg");
+}
+.gallery .gallery-left li:nth-child(5) {
+  background-image: url("imgs/gallery-6.jpg");
+}
+.gallery .gallery-left li:nth-child(6) {
+  background-image: url("imgs/gallery-7.jpg");
+}
+.gallery .gallery-right {
+  width: 25%;
+  float: right;
+  height: 620px;
+  background-image: url("imgs/gallery-4.jpg");
+  background-position: center top;
+  background-size: cover;
+}
+.news {
+  padding: 50px;
+}
+.news .news-section {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.news .news-section .news-title {
+  float: left;
+}
+.news .news-section .news-title p {
+  font-size: 14px;
+  color: #888888;
+}
+.news .news-section .news-title h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.news .news-section button {
+  width: 130px;
+  height: 40px;
+  float: right;
+  font-weight: bold;
+  background: transparent;
+  border: 1px solid #13a2b7;
+}
+.news ul {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.news ul li {
+  overflow: hidden;
+  float: left;
+  width: 33.333%;
+  box-sizing: border-box;
+}
+.news ul li .four-card {
+  padding: 25px;
+  margin: 20px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 5px 0px #5f5f5f;
+  border-radius: 5px;
+}
+.news ul li .four-card:hover {
+  box-shadow: 0px 0px 15px 0px #5f5f5f;
+}
+.news ul li .four-card:hover a {
+  text-decoration: underline;
+}
+.news ul li .four-card a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+.news ul li .four-card p {
+  margin-top: 10px;
+}
+.news ul li .four-card .information {
+  margin-top: 10px;
+  line-height: 3em;
+  color: #888888;
+}
+.news ul li .four-card .information img {
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.news ul li .four-card .information .name {
+  vertical-align: middle;
+}
+.news ul li .four-card .information .time {
+  vertical-align: middle;
+}
+.footer {
+  background-color: #121c1d;
+  color: whitesmoke;
+}
+.footer .row {
+  width: 1000px;
+  margin: 0 auto;
+}
+.footer .row .aesthetic {
+  height: 100px;
+  overflow: hidden;
+  line-height: 100px;
+}
+.footer .row .aesthetic .title {
+  width: 33.333%;
+  float: left;
+}
+.footer .row .aesthetic .title h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.footer .row .aesthetic .input {
+  width: 33.333%;
+  float: left;
+  height: 50px;
+  position: relative;
+  margin-top: 25px;
+}
+.footer .row .aesthetic .input input {
+  width: 300px;
+  height: 50px;
+  float: left;
+  border-radius: 50px;
+  background: transparent;
+  border: 1px solid lightgreen;
+}
+.footer .row .aesthetic .input .box {
+  width: 120px;
+  height: 54px;
+  background-color: #5cebf0;
+  position: absolute;
+  right: 27px;
+  border-radius: 0 50px 50px 0;
+  top: 0px;
+  line-height: 54px;
+  text-align: center;
+}
+.footer .row .aesthetic .icons {
+  width: 33.333%;
+  overflow: hidden;
+}
+.footer .row .aesthetic .icons .list {
+  overflow: hidden;
+  float: right;
+}
+.footer .row .aesthetic .icons .list ul {
+  overflow: hidden;
+}
+.footer .row .aesthetic .icons .list ul li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  float: left;
+  margin-right: 6px;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 25px;
+}
+.footer .row .aesthetic .icons .list ul li i {
+  color: #a0a0a0;
+}
+.footer .coontainer {
+  width: 1000px;
+  margin: 0 auto;
+  color: #b6b6b6;
+  overflow: hidden;
+  padding: 50px;
+}
+.footer .coontainer .company {
+  width: 100px;
+  float: left;
+  margin: 0 20px;
+}
+.footer .coontainer .company ul {
+  padding-top: 20px;
+  overflow: hidden;
+}
+.footer .coontainer .company ul li {
+  float: left;
+  margin: 5px 0;
+  font-size: 14px;
+}
+.footer .coontainer .contact {
+  width: 100px;
+  float: left;
+  margin: 0 20px;
+}
+.footer .coontainer .contact ul {
+  overflow: hidden;
+  padding-top: 20px;
+}
+.footer .coontainer .contact ul li {
+  overflow: hidden;
+  float: left;
+  margin: 15px 0;
+}
+.footer .coontainer .contact ul li i {
+  padding-right: 10px;
+  color: #5cebf0;
+}
+.footer .coontainer .bigbox {
+  width: 300px;
+  height: 200px;
+  background-color: whitesmoke;
+  float: right;
+}
+.footer .coontainer .bigbox:hover {
+  background-color: lightgrey;
+}
+.footer .footer-there {
+  width: 1000px;
+  margin: 0 auto;
+  color: #7e7e7e;
+}
+.footer .footer-there .copying {
+  overflow: hidden;
+  line-height: 3em;
+}
+.footer .footer-there .copying .template {
+  float: left;
+  font-size: 14px;
+}
+.footer .footer-there .copying .policy {
+  float: right;
+  font-size: 14px;
+}
+/*# sourceMappingURL=./hospital.css.map */

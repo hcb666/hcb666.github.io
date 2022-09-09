@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .swiper {
+            width: 300px;
+            /* height: 200px; */
+            position: relative;
+        }
+
+        .swiper .list {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .swiper .list img {
+            width: 100%;
+            position: absolute;
+transition: all .5s;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+
+        .swiper .list img:first-child {
+            position: relative;
+        }
+
+        .swiper ul.dots {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+
+        }
+
+        .swiper ul.dots li {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            margin: 0 10px;
+            border-radius: 50%;
+        }
+
+        .swiper .control {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="swiper" class="swiper">
+        <div class="list">
+            <img src="./imgs/1.jpg" alt="">
+            <img src="./imgs/2.jpg" alt="">
+            <img src="./imgs/3.jpg" alt="">
+            <img src="./imgs/4.jpg" alt="">
+        </div>
+        <ul class="dots">
+            <!-- <li title="0"></li>
+            <li title="1"></li>
+            <li title="2"></li>
+            <li title="3"></li> -->
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="control">
+            <button>prev</button>
+            <button>next</button>
+        </div>
+    </div>
+    <!-- <script>
+        var swiperEl = document.getElementById("swiper");
+        var imgs = swiperEl.getElementsByClassName("list")[0].getElementsByTagName("img");
+        var dots = swiperEl.getElementsByClassName("dots")[0].getElementsByTagName("li"); 
+        //根据索引显示第几张图片 高亮第几个dot
+        function showItem(n) {
+            for (var i = 0; i < imgs.length; i++) {
+                if (i === n) {
+                    imgs[i].style.opacity = 1;
+                    dots[i].style.backgroundColor = "red";
+                } else {
+                    imgs[i].style.opacity = 0;
+                    dots[i].style.backgroundColor = "white";
+                }             
+            }
+            //初始化（显示第？张 高亮第？个)
+            showItem(0);
+            //所有dot添加事件 
+            for (var i = 0; i < dots.length; i++) {
+                dots[i].title = i;
+                dots[i].onclick = function () {
+                    // console.log(this.title);
+                    var c = Number(this.title);
+                    showItem(c);
+                };
+                
+            }
+        }
+    </script> -->
+    <!-- <script>
+        var swiperEl = document.getElementById("swiper");
+        var imgs = swiperEl.getElementsByClassName("list")[0].getElementsByTagName("img");
+        var dots = swiperEl.getElementsByClassName("dots")[0].getElementsByTagName("li");
+        var nextBtn = swiperEl.getElementsByClassName("control")[0].getElementsByTagName("button")[0];
+        var prevBtn = swiperEl.getElementsByClassName("control")[0].getElementsByTagName("button")[1];
+
+        function showItem(n) {
+            for (var i = 0; i < imgs.length; i++) {
+                if (i === n) {
+                    imgs[i].style.opacity = "1";
+                    dots[i].style.backgroundColor = "white"
+                } else {
+                    imgs[i].style.opacity = "0";
+                    dots[i].style.backgroundColor = "black";
+
+                }
+
+            }
+            return n;
+        }
+        c = showItem(0);
+        for (var i = 0; i < dots.length; i++) {
+            //添加标记 index
+            dots[i].title = i;
+            dots[i].onclick = function () {
+                // console.log(this.title);
+                c = showItem(Number(this.title));
+                //取标记 转数字 调用函数 showItem
+                // showItem(c);
+            }
+        }
+        nextBtn.onclick = function () {
+            // console.log(c);
+            //计算下一个
+            c++;
+            if (c >= imgs.length) {
+                c = 0;
+            }
+            showItem(c);
+        }
+        // nextBtn.onclick = function () {
+        //     // showItem(c >= imgs.length ? (c = 0) : ++c);
+        //     var x = ++c >= imgs.length ? (c = 0) : c;
+        //     console.log(x);
+        //     showItem(x)
+        // }
+        prevBtn.onclick = function () {
+            c--;
+            if (c < 0) {
+                c = imgs.length - 1;
+            }
+            showItem(c);
+        };
+    </script>
+    <script>
+        //定时器
+        //   setTimeout(回调函数，timeout)
+        setTimeout(function () {
+            console.log("时间到了");
+        }, 3000);
+        //时间到了运行一次
+        setInterval(function () {
+            console.log("show time");
+            showNext();
+        }, 3000)
+        // 间隔多久运行一次
+    </script> -->
+
+    <script>
+        var swiperEl = document.getElementById("swiper");
+        var imgs = swiperEl.getElementsByClassName("list")[0].getElementsByTagName("img");
+        var dots = swiperEl.getElementsByClassName("dots")[0].getElementsByTagName("li");
+        var prevBtn = swiperEl.getElementsByClassName("control")[0].getElementsByTagName("button")[0];
+        var nextBtn = swiperEl.getElementsByClassName("control")[0].getElementsByTagName("button")[1];
+        var c;
+
+        function showItem(n) {
+            for (var i = 0; i < imgs.length; i++) {
+                if (i === n) {
+                    imgs[i].style.opacity = "1";
+                    dots[i].style.backgroundColor = "white";
+                } else {
+                    imgs[i].style.opacity = "0";
+                    dots[i].style.backgroundColor = "black";
+                }
+
+            }
+            return n;
+        }
+        c = showItem(0);
+
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].title = i;
+            dots[i].onclick = function () {
+                c = showItem(Number(this.title));
+            };
+
+        }
+
+        function showNext() {
+            c++;
+            if (c >= imgs.length) {
+                c = 0;
+            }
+            showItem(c);
+        }
+
+        nextBtn.onclick = showNext;
+
+        prevBtn.onclick = function () {
+            c--;
+            if (c < 0) {
+                c = imgs.length - 1;
+            }
+            showItem(c);
+        };
+    </script>
+    <!-- <script>
+        setTimeout(function () {
+            console.log("时间到了");
+        }, 3000);
+        setInterval(function () {
+            console.log("show time");
+            showNext();
+        }, 3000)
+    </script> -->
+</body>
+
+</html>

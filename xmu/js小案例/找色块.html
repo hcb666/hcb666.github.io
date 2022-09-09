@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./my-minireset.css">
+    <style>
+        .stage {
+            width: 600px;
+            height: 600px;
+            /* background-color: blanchedalmond; */
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .stage li {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="stage"></ul>
+    <script>
+        var level = 1
+        var stage = document.querySelector(".stage");
+
+        // debugger
+
+        function showDot(level) {
+
+            stage.innerHTML = ""; //清空
+
+            var color = "#" + Math.random().toString(16).slice(-6);
+            //随机数转化为字符串(16进制)，并从后面截取到-6位
+
+            for (let i = 0; i < Math.pow(level + 2, 2); i++) {
+                var node = document.createElement("li"); //创建元素li
+                node.style.backgroundColor = color //li的颜色
+                node.style.width = 600 / (level + 2) + "px" //每个li的大小
+                stage.appendChild(node) //追加子元素node
+            }
+            var index = Math.floor(Math.random() * stage.querySelectorAll("li").length)
+            //向下取舍随机一个数字乘与li的长度，并选中对应的li
+            stage.querySelectorAll("li")[index].style.opacity = "0.9" //使这个li透明度降低
+
+            stage.querySelectorAll("li")[index].onclick = function () { //随机选中的li进行点击事件
+                level++ //每点击一次level+1
+                showDot(level) //调用函数
+            }
+        }
+
+        showDot(level) //调用函数
+    </script>
+</body>
+
+</html>

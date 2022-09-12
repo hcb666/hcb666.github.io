@@ -7,18 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            background-image: linear-gradient(to left bottom, #052e37, #005f5f, #009366, #66c44e, #e2eb12);
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        }
         main {
             display: flex;
+            justify-content: center;
         }
 
         main section {
             display: flex;
+            margin-left: 20px;
         }
 
         main section div {
             width: 50px;
             height: 100px;
-            background-color: lightblue;
             display: flex;
             flex-direction: column;
             border: 1px solid black;
@@ -29,7 +35,7 @@
         main section div span {
             width: 100%;
             height: 100%;
-            background-color: lightcoral;
+            background-color: lightblue;
             flex-shrink: 0;
             display: flex;
             justify-content: center;
@@ -47,49 +53,28 @@
         <section class="hh">
             <div class="s1">
                 <span>0</span>
-                <!-- <span>2</span> -->
             </div>
             <div class="s2">
                 <span>0</span>
-                <!-- <span>2</span> -->
-        </section>:
+        </section>
         <section class="mm">
             <div class="s1">
                 <span>0</span>
-                <!-- <span>2</span> -->
             </div>
             <div class="s2">
                 <span>0</span>
-                <!-- <span>2</span> -->
-        </section>:
+        </section>
         <section class="ss">
             <div class="s1">
                 <span>0</span>
-                <!-- <span>2</span> -->
             </div>
             <div class="s2">
                 <span>0</span>
-                <!-- <span>2</span> -->
             </div>
 
         </section>
     </main>
     <script>
-        //个位数
-        // var s2Dom = ssDom.getElementsByTagName("div")[1]
-        // var s2span2Dom = s2Dom.getElementsByTagName("span")[0];
-        // console.log(s2span2Dom.innerText,ss[1]);
-
-        // if (s2span2Dom.innerText !== ss[1]) {
-        //     var newSpanDom = document.createElement("span");
-        // newSpanDom.innerText = ss[1];
-        // s2Dom.appendChild(newSpanDom);
-        // s2span2Dom.style.marginTop = "-100px"
-        // setTimeout(function () {
-        //     s2Dom.removeChild(s2span2Dom)
-        // })
-        // }
-
         function showNewNum(element, n) {
             //element就是显示一个数字的盒子 .s1 或者 .s2 n是新值
             var firstSpanDom = element.getElementsByTagName("span")[0];
@@ -109,23 +94,6 @@
                 //过渡完成后删除第一个span元素
             }
         }
-        // function showNewNum(element, n) {
-        //     var firstSpanDom = element.getElementByTagName("span")[0]
-        //     if (firstSpanDom.innerText !== n) {
-        //         var newSpanDom = document.createElement("span");
-        //         // 创建新元素span
-        //         newSpanDom.innerText = n
-        //         element.appendChild(newSpanDom)
-        //         //追加到元素末尾
-        //         firstSpanDom.style.marginTop = "-100px"
-        //         //向上移动100px
-        //         setTimeout(function () {
-        //             element.removeChild(firstSpanDom)
-        //             // 删除
-        //         }, 300)
-        //     }
-        // }
-
         //每秒取一下时间
         setInterval(function () {
             var now = new Date();

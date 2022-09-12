@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机统计图</title>
+    <style>
+        #root {
+            display: block;
+            /* margin: 100px auto; */
+            /* border: 1px solid #ccc; */
+        }
+
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="root" width="600" height="500">111</canvas>
+    <canvas id="canvas" width="500" height="400"></canvas>
+    <script>
+        var container = document.querySelector('#root');
+        var ctx = container.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(100, 100);
+        ctx.lineTo(100, 400); 
+        ctx.lineTo(500, 400);
+        ctx.stroke(); 
+        ctx.closePath();
+
+        for (let i = 0; i < 6; i++) {
+            let height = Math.random() * 290 + 10 
+            ctx.fillStyle = '#' + parseInt(Math.random() * 0xFFFFFe).toString(16); 
+            // ctx.fillRect(x起始位置,y起始位置,条形宽,条形高)
+            ctx.fillRect(140 + i * 60, 400 - height, 20, height);
+        }
+        var canvas = document.getElementById("canvas")
+        var context = canvas.getContext("2d")
+        context.moveTo(30, 20);
+        context.lineWidth = "1";
+        context.lineTo(30, 380);
+        context.lineTo(400, 380);
+
+
+        context.strokeStyle = "#999";
+        for (var i = 0; i < 7; i++) {
+            context.moveTo(30, 30 + 50 * i);
+            context.lineTo(400, 30 + 50 * i);
+        }
+
+
+        context.moveTo(100, 300);
+        context.lineTo(200, 200);
+        context.lineTo(280, 280);
+        context.lineTo(380, 30);
+        context.stroke();
+    </script>
+</body>
+
+</html>

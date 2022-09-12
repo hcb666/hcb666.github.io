@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        .king ul {
+            overflow: hidden;
+        }
+
+        .king ul li {
+            position: relative;
+            float: left;
+            width: 69px;
+            height: 69px;
+            margin: 0 10px;
+        }
+
+        .big {
+            width: 224px;
+            display: none;
+        }
+
+        .small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 69px;
+            height: 69px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="king">
+        <ul>
+            <li>
+                <img src="./imgs/jing.jpg" alt="" class="small">
+                <img src="./imgs/sfq7.png" alt="" class="big">
+            </li>
+            <li>
+                <img src="./imgs/libai.jpg" alt="" class="small">
+                <img src="./imgs/sfq3.png" alt="" class="big">
+            </li>
+            <li>
+                <img src="./imgs/lixin.jpg" alt="" class="small">
+                <img src="./imgs/sfq5.png" alt="" class="big">
+            </li>
+            <li>
+                <img src="./imgs/liyuanfang.jpg" alt="" class="small">
+                <img src="./imgs/sfq4.png" alt="" class="big">
+            </li>
+            <li>
+                <img src="./imgs/lubandashi.jpg" alt="" class="small">
+                <img src="./imgs/sfq6.png" alt="" class="big">
+            </li>
+            <li>
+                <img src="./imgs/xiahou.jpg" alt="" class="small">
+                <img src="./imgs/sfq1.png" alt="" class="big">
+            </li>
+            <li>
+                <img src="./imgs/zhenji.jpg" alt="" class="small">
+                <img src="./imgs/sfq2.png" alt="" class="big">
+            </li>
+        </ul>
+
+    </div>
+    <script src="./jquery.js"></script>
+    <script>
+        //初始化
+        $(".king li")
+            .eq(0)
+            .css({
+                width: 224
+            })
+            .find(".small")
+            .fadeOut()
+            .siblings(".big")
+            .fadeIn();
+        // 鼠标经过某个小li
+        $(".king li").mouseenter(function () {
+            // 1.当前小li 宽度变为 224px， 同时里面的小图片消失，大图片进入
+            $(this)
+                .stop()
+                .animate({
+                    width: 224
+                }).find(".small")
+                .stop()
+                .fadeOut()
+                .siblings(".big")
+                .stop()
+                .fadeIn();
+            // 2.其余兄弟小li宽度变为69px， 小图片进入， 大图片淡出
+            $(this)
+                .siblings("li")
+                .stop()
+                .animate({
+                    width: 69
+                })
+                .find(".small")
+                .stop()
+                .fadeIn()
+                .siblings(".big")
+                .stop()
+                .fadeOut();
+        })
+    </script>
+</body>
+
+</html>

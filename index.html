@@ -8,7 +8,7 @@
     <title>Document</title>
     <style>
         body {
-            background-color: rgb(142, 142, 142);
+            background-image: linear-gradient(to left bottom, #2a0537, #520e61, #80158c, #b318b7, #eb12e2);
         }
 
         .clear {
@@ -25,12 +25,27 @@
 
         main section div {
             float: left;
-            margin-left: 10px;
+            margin-left: 25px;
         }
-
+        main section div a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            
+        }
+        main section div a h5 {
+            transition: all .5s;
+        }
+        main section div img:hover {
+            transform: scale(1.2);
+        }
+        main section div h5:hover {
+            color: blueviolet;
+        }
         img {
             width: 200px;
             height: 200px;
+            transition: all .5s;
         }
     </style>
 </head>

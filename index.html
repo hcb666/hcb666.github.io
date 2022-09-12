@@ -10,10 +10,24 @@
         body {
             background-color: rgb(142, 142, 142);
         }
-        main {
-            display: flex;
-            flex-wrap: wrap;
+
+        .clear {
+            content: "";
+            display: block;
+            clear: both;
         }
+
+        main {
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        main section div {
+            float: left;
+            margin-left: 10px;
+        }
+
         img {
             width: 200px;
             height: 200px;
@@ -22,80 +36,147 @@
 </head>
 
 <body>
-    <main>
-        <section class="static">
+    <main class="">
+        <section class="static clear">
             <h1>静态</h1>
             <div class="static-hospital">
-                <a href="./xmu/static/hospital.html"> <img src="./xmu/static/imgs/consultation-video.jpg" alt=""></a>
+                <a href="./xmu/static/hospital.html"> 
+                    <img src="./xmu/static/imgs/consultation-video.jpg" alt="">
+                    <h5>整容医院</h5>
+                </a>
             </div>
             <div class="static-children">
                 <a href="./xmu/static/children/index.html">
                     <img src="./xmu/static/children/imgs/person_1.jpg" alt="">
+                    <h5>儿童乐园</h5>
                 </a>
             </div>
             <div class="llq">
                 <a href="./xmu/static/360-copy.html">
                     <img src="./xmu/static/imgs/3601.jpg" alt="">
+                    <h5>360</h5>
                 </a>
             </div>
         </section>
 
 
-        <section class="boots">
-        <h1>响应式</h1>
+        <section class="boots clear">
+            <h1>响应式</h1>
             <div class="hospital">
                 <a href="./xmu/zy/整容医院.html">
                     <img src="./xmu/zy/imgs/gallery-1.jpg" alt="">
+                    <h5>整容医院</h5>
                 </a>
             </div>
             <div class="children">
                 <a href="./xmu/zy/index.html">
                     <img src="./xmu/zy/imgs/img_1.jpg" alt="">
+                    <h5>儿童乐园</h5>
                 </a>
             </div>
         </section>
-        <section class="css3">
+        <section class="css3 clear">
             <h1>css3&h5</h1>
             <div class="loading">
                 <a href="./xmu/css3&h5/loading.html">
                     <img src="./xmu/css3&h5/love.jpg" alt="">
+                    <h5>loading动画</h5>
                 </a>
             </div>
             <div class="3d-card">
                 <a href="./xmu/css3&h5/3d-card.html">
                     <img src="./xmu/css3&h5/600x600.jpg" alt="">
+                    <h5>3d卡片</h5>
                 </a>
             </div>
             <div class="sc">
                 <a href="./xmu/css3&h5/视差.html">
                     <img src="https://res.cloudinary.com/dkgrf00g1/image/upload/v1536453880/codepen/lay3.svg" alt="">
+                    <h5>3d视差</h5>
                 </a>
             </div>
             <div class="off">
                 <a href="./xmu/css3&h5/开关.html">
                     <img src="./xmu/css3&h5/off.jpg" alt="">
+                    <h5>开关</h5>
+                </a>
+            </div>
+            <div class="tjt">
+                <a href="./xmu/css3&h5/统计图.html">
+                    <img src="./xmu/css3&h5/djt.png" alt="">
                 </a>
             </div>
         </section>
 
-        <section>
+        <section class="clear">
             <div class="anli">
                 <h1>js小案例</h1>
                 <div class="fdj">
-                   <a href="./xmu/js小案例/放大镜.html">
-                    <img src="./xmu/js小案例/imgs/1 copy.jpg" alt="">
-                   </a>
+                    <a href="./xmu/js小案例/放大镜.html">
+                        <img src="./xmu/js小案例/imgs/1 copy.jpg" alt="">
+                        <h5>放大镜</h5>
+                    </a>
                 </div>
                 <div class="sfq">
-                   <a href="./xmu/js小案例/手风琴.html">
-                    <img src="./xmu/js小案例/imgs/1 (1).jpg" alt="">
-                   </a>
+                    <a href="./xmu/js小案例/手风琴.html">
+                        <img src="./xmu/js小案例/imgs/1 (1).jpg" alt="">
+                        <h5>手风琴</h5>
+                    </a>
                 </div>
                 <div class="wzsjq">
                     <a href="./xmu/js小案例/wzsfq.html">
                         <img src="./xmu/js小案例/imgs/jing.jpg" alt="">
-                       </a>
+                        <h5>王者手风琴</h5>
+                    </a>
                 </div>
+                <div class="gdsz">
+                    <a href="./xmu/js小案例/滚动时钟.html">
+                        <img src="./xmu/js小案例/imgs/gdsz.png" alt="">
+                        <h5>滚动时钟</h5>
+                    </a>
+                </div>
+                <div class="zsk">
+                    <a href="./xmu/js小案例/找色块.html">
+                        <img src="./xmu/js小案例/imgs/zsk.png" alt="">
+                        <h5>找色块</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="xyx">
+                <a href="./xmu/js小案例/2048.html">
+                    <img src="./xmu/js小案例/imgs/2048.png" alt="">
+                    <h5>2048小游戏</h5>
+                </a>
+            </div>
+            <div class="kpjy">
+                <a href="./xmu/js小案例/卡片记忆.html">
+                    <img src="./xmu/js小案例/imgs/kpjyy.png" alt="">
+                    <h5>卡片记忆</h5>
+                </a>
+            </div>
+            <div class="choujiang">
+                <a href="./xmu/js小案例/九宫格.html">
+                    <img src="./xmu/js小案例/imgs/choujiang.png" alt="">
+                    <h5>九宫格抽奖</h5>
+                </a>
+            </div>
+            <div class="hbk">
+                <a href="./xmu/js小案例/黑白快.html">
+                    <img src="./xmu/js小案例/imgs/hbk.png" alt="">
+                    <h5>别踩白块</h5>
+                </a>
+            </div>
+            <div class="hmbb">
+                <a href="./xmu/js小案例/index.html">
+                    <img src="./xmu/js小案例/imgs/eee63cd.webp" alt="">
+                    <h5>B站预览</h5>
+                </a>
+            </div>
+            <div class="sjld">
+                <a href="./xmu/js小案例/三级联动.html">
+                    <img src="./xmu/js小案例/imgs/sjld.png" alt="">
+                    <h5>省市区三级联动</h5>
+                </a>
             </div>
         </section>
     </main>

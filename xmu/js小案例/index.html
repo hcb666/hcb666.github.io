@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bili-video {
+            margin: 0 auto;
+            width: 206px;
+            height: 192px;
+        }
+
+        .bili-video .video-img {
+            position: relative;
+            width: 206px;
+            height: 116px;
+            background-image: url(./imgs/486142478_dc4dcb-0001.jpg);
+        }
+        .bili-video .video-img img {
+            width: 100%;
+            height: 100%;
+        }
+        .bili-video:hover  .video-img img{
+            display: none;
+        }
+
+        .bili-nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .bili-nav .black {
+            /* padding: 4px 0px 0px 2px; */
+            border: 4px solid #000;
+            border-bottom: 5px solid #000 ;
+            height: 3px;
+            background-color: #999;
+        }
+
+        /* .bili-nav .black::after {
+            position: absolute;
+            top: 4px;
+            content: '';
+            width: 192px;
+            height: 3px;
+            background-color: #999;
+        } */
+
+        .danmu {
+            position: relative;
+            display: block;
+            font-size: 12px;
+            white-space: nowrap;
+            color: #fff;
+            z-index: 999;
+        }
+
+        .text {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-size: 15px;
+        }
+
+        a:hover {
+            color: #00a1d6;
+        }
+
+        .user,
+        .user a {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .user span {
+            padding-bottom: 1px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bili-video">
+        
+        <div class="video-img">
+            <img src="./imgs/eee63cd.webp" alt="">
+        </div>
+    </div>
+    <script>
+        var biliVideo = document.querySelector('.bili-video')
+        var videoImg = document.querySelector('.video-img')
+        var div = document.createElement('div')
+        var span = document.createElement('span')
+        var spn = document.createElement('span')
+        var spn1 = document.createElement('span')
+        var box = document.createElement('div')
+        var imgHeight = 1350
+        var imgWidth = 2400
+        videoImg.onmouseenter = function (e) {
+            var spanHeight = 0
+            span.style.display = 'block'
+            div.className = 'bili-nav'
+            span.style.height = '2px'
+            span.style.maxWidth = '200px'
+            span.style.backgroundColor = '#fff'
+            box.className = 'black'
+            spn1.innerHTML = '黄鸭子'
+            spn1.className = 'danmu'
+            spn.innerHTML = '这是什么鸭子'
+            spn.className = 'danmu'
+            videoImg.style.backgroundSize = imgWidth + 'px ' + imgHeight + 'px'
+
+            videoImg.onmousemove = function (evt) {
+                var x = evt.offsetX
+                var y = evt.offsetY
+                span.style.width = x + 'px'
+                var videoPosition = 0
+                for (var i = 0; i < newArr.length; i++) {
+                    if (x >= newArr[i] && x <= newArr[i + 1]) {
+                        videoImg.style.backgroundPositionX = -arr[i][0] + 'px'
+                        videoImg.style.backgroundPositionY = -arr[i][1] + 'px'
+                    }
+
+                }
+
+            }
+
+            box.appendChild(span)
+            div.appendChild(box)
+            div.appendChild(spn)
+            div.appendChild(spn1)
+            videoImg.appendChild(div)
+            var newArr = []
+            var s = 0
+            for (var j = 0; j < 100; j++) {
+                newArr.push(s)
+                s += parseInt(span.style.maxWidth) / 100
+            }
+            var dan = -70
+            var dan2 = -40
+            spn.style.left = dan + 'px'
+            spn1.style.left = dan2 + 'px'
+            var danval = setInterval(function () {
+                dan ++ 
+                dan2 += 1.5
+                spn.style.left = dan + 'px'
+                spn1.style.left = dan2 + 'px'
+                if (dan >= 192) {
+                    dan = -70
+                } else if ( dan >= 191) {
+                    dan2 = -40
+                }
+            }, 33)
+
+            this.onmouseleave = function () {
+                videoImg.style.backgroundPosition = '-240px 0px'
+                videoImg.removeChild(div)
+                clearTimeout(danval)
+            }
+        }
+        var arr = []
+        var cnt = 0
+        for (var i = 0; i < 10; i++) {
+            var count = 0
+            for (var j = 0; j < 10; j++) {
+                count += 240
+                arr.push([count, cnt])
+            }
+            cnt += 135
+        }
+        console.log(arr)
+
+
+    </script>
+</body>
+
+</html>

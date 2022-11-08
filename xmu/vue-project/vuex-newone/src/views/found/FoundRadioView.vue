@@ -1,0 +1,348 @@
+<template>
+  <div class="rad-view animate__animated animate__fadeInUp">
+    <div class="wrap">
+      <div class="wrap-top">
+        <div class="card">
+          <img src="@/assets/images/return_image_4_0_night.png" alt @click="$router.back()" />
+          <img src="@/assets/images/favourite_gray.png" alt />
+        </div>
+        <div class="bg" :style="{backgroundImage:radio?`url('${radio?.json_content?.cover}')` : ''}">
+          <div class="img">
+          </div>
+        </div>
+        <div class="t-section">
+          <h1>{{radio?.title}}</h1>
+          <audio :src="radio?.audio" autoplay></audio>
+          <div class="t-box">
+            <span>{{radio?.json_content?.simple_author[0]}}</span>
+            <span>{{radio?.json_content?.simple_author[1]}}</span>
+          </div>
+          <h3 v-html="radio?.json_content?.content"
+            style="font-size:13rem;color:#333;font-weight:400;line-height:30rem; "></h3>
+          <h5>{{radio?.json_content?.editor}}</h5>
+          <FoundRadioViewComponent id="component" :author="author" :rela="rela" :praiseand="praiseand" />
+        </div>
+      </div>
+      <div class="wrap-fot">
+        <form action>
+          <input type="text" placeholder="写一个评论" />
+        </form>
+        <div class="icon">
+          <span>
+            <img src="@/assets/images/feeds_laud_default.png" alt />
+            <p>{{radio?.praisenum}}</p>
+          </span>
+          <span>
+            <a href="#component">
+              <img src="@/assets/images/bottom_comment.png" alt />
+            </a>
+            <p>{{radio?.commentnum}}</p>
+          </span>
+          <span @click="show=true">
+            <img src="@/assets/images/share_image.png" alt />
+          </span>
+        </div>
+      </div>
+      <div class="mask animate__animated animate__fadeInUp" v-if="show">
+        <div class="clear" @click="show=false">
+          <img src="@/assets/images/close_pressed.png" alt />
+        </div>
+        <div class="icon">
+          <span>
+            <img src="@/assets/images/bubble_moment.png" alt />
+          </span>
+          <span>
+            <img src="@/assets/images/bubble_wechat.png" alt />
+          </span>
+          <span>
+            <img src="@/assets/images/bubble_qq.png" alt />
+          </span>
+          <span>
+            <img src="@/assets/images/bubble_weibo.png" alt />
+          </span>
+          <span>
+            <img src="@/assets/images/bubble_copy_link.png" alt />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div v-if="loading" class="locadingmask">
+      <div class="locading"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+// https://apis.netstart.cn/one/radio/htmlcontent/3861
+import FoundRadioViewComponent from "@/components/foundc/FoundRadioViewComponent.vue";
+export default {
+  components: {
+    FoundRadioViewComponent
+  },
+  data() {
+    return {
+      radio: null,
+      author: [],
+      rela: [],
+      praiseand: null,
+      show: false,
+      loading: false
+    };
+  },
+  methods: {
+    getPlayList: function (id) {
+      this.loading = true
+
+      Promise.all([
+        this.axios.get(`https://apis.netstart.cn/one/radio/htmlcontent/${id}`),
+        this.axios.get(
+          `https://apis.netstart.cn/one/author/list?content_id=${id}&category=8`
+        ),
+        this.axios.get(
+          `https://apis.netstart.cn/one/relatedforwebview/radio/${id}`
+        ),
+        this.axios.get(
+          `https://apis.netstart.cn/one/comment/praiseandtime/radio/${id}/0`
+        )
+      ]).then(([res, author, rela, praiseand]) => {
+        this.loading = false;
+
+        this.radio = res.data.data;
+        this.author = author.data.data;
+        this.rela = rela.data.data;
+        this.praiseand = praiseand.data.data;
+      });
+    }
+  },
+  created() {
+    this.getPlayList(this.$route?.query?.id);
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.getPlayList(to.query.id);
+    next();
+  }
+};
+</script>
+
+<style lang="less" scoped>
+.rad-view {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+
+  .wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .wrap-top {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      div.card {
+        position: relative;
+        z-index: 310;
+        height: 50px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          width: 18rem;
+          margin: 0 15rem;
+        }
+
+        h3 {
+          flex: 1;
+          font-size: 18rem;
+          color: #333333;
+          font-weight: 16;
+        }
+      }
+
+      div.bg {
+        width: 100%;
+        height: 240rem;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 309;
+
+        div.img {
+          position: relative;
+          height: 100%;
+          text-align: center;
+
+          img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
+
+          p {
+            position: absolute;
+            bottom: 20rem;
+            left: 30rem;
+            color: #a8a2a2;
+          }
+        }
+      }
+
+      div.t-section {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        margin: 0 20rem;
+
+        h1 {
+          margin-bottom: 30rem;
+          color: #333333;
+          font-weight: 700;
+          font-size: 20rem;
+        }
+
+        div.t-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 30rem;
+
+          span {
+            img {
+              width: 18rem;
+            }
+          }
+        }
+
+        h5 {
+          margin-bottom: 60rem;
+          margin-top: 20rem;
+          color: #a8a2a2;
+          font-size: 12rem;
+        }
+      }
+    }
+
+    .wrap-fot {
+      width: 100%;
+      height: 50px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #fdfdfd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      form {
+        margin-left: 20rem;
+
+        input {
+          width: 120rem;
+          height: 30rem;
+          border-radius: 5rem;
+          border: 1rem solid #a8a2a2;
+          outline-style: none;
+        }
+      }
+
+      div.icon {
+        display: flex;
+
+        span {
+          display: flex;
+          margin: 0 20rem;
+          transition: all .3s;
+
+          p {
+            font-size: 10rem;
+            color: #a8a2a2;
+          }
+
+          img {
+            width: 18rem;
+          }
+        }
+      }
+    }
+
+    .mask {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      z-index: 301;
+      display: flex;
+      flex-direction: column;
+
+      div.clear {
+        text-align: right;
+
+        img {
+          width: 40rem;
+          margin: 10rem;
+        }
+      }
+
+      div.icon {
+        display: flex;
+        flex-wrap: wrap;
+
+        span {
+          width: 100%;
+          display: block;
+          text-align: center;
+          margin: 30rem 0;
+
+          img {
+            width: 35rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.locadingmask {
+  width: 100vw;
+  height: calc(100vh - 50rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0rem;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+
+  .locading {
+    width: 154rem;
+    height: 155rem;
+    background-image: url("@/assets/loading.jpg");
+    background-repeat: no-repeat;
+    animation-name: xxx;
+    animation-duration: 3s;
+    margin: 220rem auto;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(0, end);
+  }
+}
+</style>

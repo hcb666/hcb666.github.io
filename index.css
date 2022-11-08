@@ -1,0 +1,37 @@
+body {
+  background-image: linear-gradient(to left bottom, #2a0537, #520e61, #80158c, #b318b7, #eb12e2);
+}
+.clear {
+  content: "";
+  display: block;
+  clear: both;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+main section div {
+  float: left;
+  margin-left: 25px;
+}
+main section div a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+main section div a img {
+  width: 200px;
+  height: 200px;
+  transition: all 0.5s;
+}
+main section div a img:hover {
+  transform: scale(1.2);
+}
+main section div a h5 {
+  transition: all 0.5s;
+}
+main section div a h5:hover {
+  color: blueviolet;
+}
+/*# sourceMappingURL=./index.css.map */
